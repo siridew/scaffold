@@ -1,3 +1,7 @@
+# Nourish
+
+A modern dashboard application built with Next.js 14, TypeScript, Tailwind CSS, Shadcn UI, and Supabase authentication.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
