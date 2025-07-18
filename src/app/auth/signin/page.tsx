@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -20,7 +20,7 @@ const signinSchema = z.object({
 
 type SigninFormValues = z.infer<typeof signinSchema>
 
-export default function SigninPage() {
+function SigninForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const message = searchParams.get("message")
@@ -135,5 +135,17 @@ export default function SigninPage() {
         </CardFooter>
       </Card>
     </div>
+  )
+}
+
+export default function SigninPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-background p-4">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    }>
+      <SigninForm />
+    </Suspense>
   )
 }
