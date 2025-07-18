@@ -55,7 +55,7 @@ export default function SignupPage() {
         // Show success message about email verification
         router.push("/auth/signin?message=Success! Please check your email to verify your account before signing in.")
       }
-    } catch (error) {
+    } catch {
       setError("An unexpected error occurred")
     } finally {
       setIsLoading(false)
