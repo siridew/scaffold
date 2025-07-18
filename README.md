@@ -1,4 +1,4 @@
-# Nourish
+# Scaffold
 
 A modern dashboard application built with Next.js 14, TypeScript, Tailwind CSS, Shadcn UI, and Supabase authentication.
 
